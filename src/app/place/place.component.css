@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+}
+.table-container {
+  padding-top: 20px;
+  max-width: 1248px;
+  margin: 0 auto;
+}
+.table-button + .table-button {
+  margin-left: 8px;
+}
+.table-button-container {
+  padding-bottom: 16px;
+}
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}

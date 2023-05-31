@@ -1,0 +1,14 @@
+.login-container {
+    margin-top: 40px;
+    align-items: center;
+    width: 350px;
+}
+.login-container mat-form-field {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+.login-error {
+    text-align: center;
+}
+
+

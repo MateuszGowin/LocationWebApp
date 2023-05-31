@@ -1,0 +1,54 @@
+<div mat-dialog-title>
+    <h1>Edytuj miejsce</h1>
+</div>
+<form [formGroup]="placeForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline" class="col-md-6">
+                <mat-label>Nazwa</mat-label>
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>            
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="col-md-4">
+                <mat-label>Miasto</mat-label>
+                <input matInput type="text" formControlName="city">
+            </mat-form-field>            
+        
+            <mat-form-field appearance="outline" class="col-md-4">
+                <mat-label>Ulica</mat-label>
+                <input matInput type="text" formControlName="street">
+            </mat-form-field>  
+
+            <mat-form-field appearance="outline" class="col-md-4">
+                <mat-label>Numer</mat-label>
+                <input matInput type="number" formControlName="number">
+            </mat-form-field>      
+        </div> 
+
+        <div class="row">
+            <mat-form-field appearance="outline" class="col-md-6">
+                <mat-label>Typ</mat-label>
+                <mat-select formControlName="type">
+                    <mat-option *ngFor="let type of types" [value]="type">{{type}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>        
+        </div> 
+
+        <div class="row">
+            <mat-form-field appearance="outline" class="col-md-6">
+                <mat-label>Długość geograficzna</mat-label>
+                <input matInput type="number" formControlName="longitude">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="col-md-6">
+                <mat-label>Szerokość geograficzna</mat-label>
+                <input matInput type="number" formControlName="latitude">
+            </mat-form-field>            
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Anuluj</button>
+        <button mat-raised-button color="primary" type="submit">Zapisz</button>
+    </div>
+</form>

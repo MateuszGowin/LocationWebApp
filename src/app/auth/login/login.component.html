@@ -1,0 +1,27 @@
+<mat-card class="login-container">
+    <form [formGroup]="loginForm">
+        <mat-card-content>
+            <mat-form-field>
+                <mat-label>Login</mat-label>
+                <input matInput type="email" formControlName="email">
+                <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+                    Pole nie może być puste
+                </mat-error>                
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Hasło</mat-label>
+                <input matInput type="password" formControlName="password">       
+                <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                    Pole nie może być puste
+                </mat-error> 
+            </mat-form-field>
+            <mat-error *ngIf="loginError" class="login-error">
+                {{ loginError }}
+            </mat-error>  
+        </mat-card-content>  
+              
+    </form>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" (click)="login()" [disabled]="loginForm.invalid">Zaloguj się</button>
+    </mat-card-actions>
+</mat-card>

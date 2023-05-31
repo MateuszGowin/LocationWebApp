@@ -1,0 +1,18 @@
+.verify-container {
+    margin-top: 40px;
+    align-items: center;
+    background-color:aliceblue;
+    max-width: 600px;
+}
+p {
+    padding: 40px;
+}
+
+.verify-container mat-card-header{
+    font-size: 1.5rem; 
+    text-align: center; 
+    font-weight:bold;
+}
+.verify-container mat-card-content{
+    text-align: left; 
+}

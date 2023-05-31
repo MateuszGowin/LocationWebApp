@@ -1,0 +1,4 @@
+<app-navigation *ngIf ="authService.isLoggedIn() | async"></app-navigation>
+<div [ngStyle]="{'height': (authService.isLoggedIn() | async) ? 'calc(100vh - 64px)' : '100vh'}" class="content">
+    <router-outlet></router-outlet>
+</div>
